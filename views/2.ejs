@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/post.css">
+    <link rel="stylesheet" href="/postTemplate.css">
+
+    <title>Post title</title>
+    <%- include('./partials/navbar')%>
+
+</head>
+<body>
+    <div class="titleSection">
+    <h1>Creating a slide-like website with z-index</h1>
+    <h2>Most websites are very static and conventional, spice up yours with a slide-like effect on scroll!</h2>
+    </div>
+
+    <div class="exampleHolder">
+    <h2>Scroll inside of this container to see property we will be implementing:</h2>
+    <div id="wrapper">
+        <div id="scroller">
+            <div class="panel">
+                <div class="slideContent">First Slide Content</div>
+            </div>     
+            <div class="panel">
+                <div class="slideContent">Second Slide Content</div>
+            </div>
+            <div class="panel">
+                <div class="slideContent">Third Slide Content</div>
+            </div>
+        </div>
+    </div>
+    </div>  
+
+    <div class="conceptsSection">
+        <h3>Important concepts:</h3>
+        <section>z-index: CSS property that defines the order of overlapping content. Components with a higher z-index will
+        be displayed over components with lower z index.</section>
+
+        <section>position relative: By default components have position static, meaning they follow the normal flow of an HTML document. 
+        However, by changing an element's position to relative you are able to move the element from the position it would normally have
+        relative to it's parent container. This is done using the properties top, bottom, right, and left. </section>
+
+        <section>position sticky: Components with position:sticky behave as though they have position:relative until they pass a specified
+            threshold in the document. Once they pass the threshold they behave as if they have the position:fixed property; meaning that
+            they are no longer in the flow of the document and will stay where they are positioned unless the threshold is passed again.
+        </section>
+    </div>
+
+    <div class="tutorialSection">
+        <h3>Step 1: Create panel class</h3>
+        <section>Create a panel class which will be given to every "panel" on your webpage. The height of .panel needs to be
+            at least 100vh so that each panel covers the entire screen when they "stick" to the top. Height is set to 105vh in this example
+            to create a smoother scrolling effect. 
+        </section>
+        <div class="codeHolder">
+            <p><script src="https://gist.github.com/Chrisarev/5d468d2c2b7a3c5a3ba77e0747f020ea.js"></script></p>
+            <p><script src="https://gist.github.com/Chrisarev/e9018433c75ab2f8bf79508dcbe1f35c.js"></script></p>
+        </div>
+        <section>In order for the panels to stick to
+            the top they need position:sticky and top:0. The property top:0 specifies that when the top of our panel reaches 
+            the viewport's 0th pixel it will "stick" and become fixed.
+        </section>
+
+    <h3>Step 2: Create panel content holder</h3>
+    <section>Create a panelContent class inside of the panel class which will hold all content for each slide. This component should
+        have position:relative so that z-index can be set for content inside of it. Margin-top and text-align are only added so each 
+        panel has text which will be covered by the next panel to ensure everything is working properly. 
+    </section>
+    <div class="codeHolder">
+    <script src="https://gist.github.com/Chrisarev/7b8fffa08ef28eb10c95d9b6fce3c25a.js"></script>
+    </div>
+
+    <h3>And thats it ! Now you can add your own content inside of the slides and customize everything as you like ! Just make sure to
+        keep track of your z-index's and everything else is just like building a regular website layout. Enjoy :) 
+    </h3>
+
+    </div>
+    <div class="footer">
+
+    </div>
+
+    <%# DARK MODE FOR GISTS %>
+    <style>
+        /* https://github.com/lonekorean/gist-syntax-themes */
+        @import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/idle-fingers.css');
+        
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+        body .gist{
+            display:block;
+            width:100%; 
+        }
+
+        body .gist .gist-file {
+          border-color: #555 #555 #444
+        }
+        body .gist .gist-data {
+          border-color: #555
+        }
+        body .gist .gist-meta {
+          color: #ffffff;
+          background: #373737; 
+        }
+        body .gist .gist-meta a {
+          color: #ffffff
+        }
+        body .gist .gist-data .pl-s .pl-s1 {
+          color: #a5c261
+        }
+        </style>
+</body>
+</html>

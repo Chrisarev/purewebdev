@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Post</title>
+</head>
+<body>
+    <form action="create" method="POST">
+        <label for="idInput">ID:</label>
+        <input type="Number" name="post[id]" id="idInput">
+        <label for="titleInput">Title:</label>
+        <input type="text" name="post[title]" id="titleInput">
+        <label for="dateInput">Date:</label>
+        <input type="date" name="post[date]" id="dateInput">
+        <label for="imageInput">Image Info:</label>
+        <input type="text" name="post[imageURL]" id="imageInput">
+        <fieldset>
+            <legend>Tags:</legend>
+        
+            <div>
+              <input type="checkbox" id="htmlInput" name="post[tags]" value="HTML" checked>
+              <label for="htmlInput">HTML</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cssInput" name="post[tags]" value="CSS">
+                <label for="cssInput">CSS</label>
+            </div>
+            <div>
+                <input type="checkbox" id="jsInput" name="post[tags]" value="JS">
+                <label for="jsInput">JS</label>
+            </div>
+        </fieldset>
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>

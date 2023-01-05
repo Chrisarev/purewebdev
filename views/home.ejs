@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <title>PureWebDev</title>
+
+    <%- include('./partials/navbar.ejs')%>
+</head>
+<body>
+    <h1>PURE WEBSITE DEVELOPMENT</h1>
+    <h2>How to build front-end features for websites with only vanilla HTML, CSS, and JavaScript.</h2>
+
+    <div class="container">
+
+        <section class="postSection">
+            <h3>Latest Posts</h3>
+            <%for(post of posts){ %>
+            <div class="post">
+                <a href="post/<%=post.id%>">
+                <div class="postImage">
+                    <img src="<%=post.imageURL%>" alt="">
+                </div>
+                </a>
+                <div class="postBody">
+
+                    <a href="post/<%=post.id%>"><p class="postTitle"><%=post.title%></p></a>
+                    <div class="postDate">Posted on <%= post.date.toString().slice(4,15)%></div>
+                    <div class="postTags">
+                        <% if (post.tags.includes('HTML')) {%>
+                        <form action="post">
+                            <button class="htmlTag">HTML</button>
+                        </form>
+                        <% } %>
+                        <% if (post.tags.includes('CSS')) {%>
+                        <form action="post">
+                            <button class="cssTag">CSS</button>
+                        </form>
+                        <% } %>
+                        <% if (post.tags.includes('JS')) {%>
+                        <form action="post">
+                            <button class="jsTag">JS</button>
+                        </form>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+
+            <div class="post">
+                <div class="postImage"></div>
+                <div class="postBody">
+                    <p class="postTitle">Post Title</p>
+                    <div class="postDate">Posted on DATE</div>
+                    <div class="postTags">
+                        <button class="htmlTag">HTML</button>
+                        <button class="cssTag">CSS</button>
+                        <button class="jsTag">JS</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featuredSection">
+            <h3>Featured</h3>
+            <div class="featuredHolder">
+                
+            </div>
+
+        </section>
+    </div>
+    <div class="footer">
+
+    </div>
+
+    <script src="/home.js"></script>
+</body>
+</html>

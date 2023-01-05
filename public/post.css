@@ -1,0 +1,42 @@
+body{
+    margin:0; 
+    padding:0;
+    background-color: grey;
+}
+
+#wrapper {
+    width: 40vw;
+    overflow: hidden;
+    outline: 1px solid blue;
+}
+
+#scroller {
+    width: 40vw;
+    height: 30vh;
+    overflow: auto;
+    background: yellow;
+}
+
+.panel{
+    width:100%;
+    height:100%; 
+    display: block;
+    position: sticky;
+    top: 0;
+    background-color:lightcoral;
+}
+
+.panel:nth-child(2){
+    background-color: aqua;
+}
+
+.panel:nth-child(3){
+    background-color: lightgoldenrodyellow;
+}
+
+.slideContent{
+    position:relative;
+    padding-top:10%;
+    width:100%; 
+    text-align:center; 
+}
