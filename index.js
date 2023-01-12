@@ -51,6 +51,10 @@ app.get('/test', (req,res) =>{
     res.render('test')
 })
 
+app.get('/contact', (req,res) =>{
+    res.render('contact')
+})
+
 app.get('/', async (req,res) =>{
     const posts = await Post.find().sort({ _id: -1 }).limit(10); ///gets 10 latest posts
     console.log(posts)

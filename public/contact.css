@@ -1,0 +1,22 @@
+#formHolder{
+    margin-top:16vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+}
+form{
+    background-color: #2a2a2a;
+    display:flex; 
+    flex-direction: column;
+    width:28rem;
+    min-height:60vh; 
+    box-shadow: 0 0 4px #9ecaed;
+    border-radius:10px; 
+}
+form h2{
+    font-size:calc(1em + 2vmin);
+    margin-top:1.7rem;
+}
+h3{
+    
+}

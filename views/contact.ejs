@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <title>Contact Us</title>
+    <%- include('./partials/navbar.ejs')%>
+
+</head>
+<body>
+    <div id="formHolder">
+        <form action="">
+            <h2>Contact Us</h2>
+            <div class="inputGroup">
+                <label for="nameInput">Enter Your Name</label>
+                <input type="text" id="nameInput" placeholder="Your Name Here" name="name" required>
+            </div>
+            <div class="inputGroup">
+                <label for="emailInput">Enter Your Email</label>
+                <input type="email" id="emailInput" placeholder="Enter your email" name="email" required>
+            </div>
+            <div class="inputGroup">
+                <label for="phoneInput">Enter your phone # *Optional*</label>
+                <input type="tel" title="Only enter numbers." name="phone">
+            </div>
+            <div class="inputGroup">
+                <label for="commentInput">Leave a comment</label>
+                <textarea name="comment" id="commentInput" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
