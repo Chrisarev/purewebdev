@@ -31,7 +31,9 @@ app.use(methodOverride('_method')) ///allows requests other than get/post thru f
 app.get('/post', (req,res) =>{
     res.render('1')
 })
-
+app.get('/2', (req,res) =>{
+    res.render('2')
+})
 app.get('/post/:id',(req,res) =>{
     const id = req.params.id; 
     res.render(`${id}`)

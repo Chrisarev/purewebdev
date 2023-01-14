@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/post.css">
     <link rel="stylesheet" href="/postTemplate.css">
+    <link rel="stylesheet" href="/post2.css">
 
     <title>Post title</title>
     <%- include('./partials/navbar')%>
@@ -16,70 +16,319 @@
 </head>
 <body>
     <div class="titleSection">
-    <h1>Creating a slide-like website with z-index</h1>
-    <h2>Most websites are very static and conventional, spice up yours with a slide-like effect on scroll!</h2>
+    <h1>Simple responsive card components</h1>
+    <h2>Knowing how to create elegant, responsive card components is a must have skill for successful web developers.</h2>
     </div>
 
-    <div class="exampleHolder">
-    <h2>Scroll inside of this container to see property we will be implementing:</h2>
-    <div id="wrapper">
-        <div id="scroller">
-            <div class="panel">
-                <div class="slideContent">First Slide Content</div>
-            </div>     
-            <div class="panel">
-                <div class="slideContent">Second Slide Content</div>
+    <h2>These are the cards we will be creating!</h2>
+    <div id="cardHolder">
+        <div class="card">
+            <div class="cardImage">                        
+                <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame 1" clip-path="url(#clip0_1_3)">
+                <g id="X" filter="url(#filter0_d_1_3)">
+                <path d="M93.8125 32L109.945 59.2656H110.57L126.781 32H145.883L121.469 72L146.43 112H126.977L110.57 84.6953H109.945L93.5391 112H74.1641L99.2031 72L74.6328 32H93.8125Z" fill="white"/>
+                <path d="M93.8125 32L94.6731 31.4908L94.3827 31H93.8125V32ZM109.945 59.2656L109.085 59.7748L109.375 60.2656H109.945V59.2656ZM110.57 59.2656V60.2656H111.139L111.43 59.7767L110.57 59.2656ZM126.781 32V31H126.212L125.922 31.4889L126.781 32ZM145.883 32L146.736 32.521L147.665 31H145.883V32ZM121.469 72L120.615 71.479L120.294 72.0058L120.62 72.5294L121.469 72ZM146.43 112V113H148.232L147.278 111.471L146.43 112ZM126.977 112L126.119 112.515L126.411 113H126.977V112ZM110.57 84.6953L111.427 84.1803L111.136 83.6953H110.57V84.6953ZM109.945 84.6953V83.6953H109.38L109.088 84.1803L109.945 84.6953ZM93.5391 112V113H94.1048L94.3962 112.515L93.5391 112ZM74.1641 112L73.3164 111.469L72.3583 113H74.1641V112ZM99.2031 72L100.051 72.5306L100.38 72.005L100.055 71.4766L99.2031 72ZM74.6328 32V31H72.845L73.7807 32.5234L74.6328 32ZM92.9519 32.5092L109.085 59.7748L110.806 58.7564L94.6731 31.4908L92.9519 32.5092ZM109.945 60.2656H110.57V58.2656H109.945V60.2656ZM111.43 59.7767L127.641 32.511L125.922 31.4889L109.711 58.7546L111.43 59.7767ZM126.781 33H145.883V31H126.781V33ZM145.029 31.479L120.615 71.479L122.322 72.521L146.736 32.521L145.029 31.479ZM120.62 72.5294L145.581 112.529L147.278 111.471L122.317 71.4706L120.62 72.5294ZM146.43 111H126.977V113H146.43V111ZM127.834 111.485L111.427 84.1803L109.713 85.2103L126.119 112.515L127.834 111.485ZM110.57 83.6953H109.945V85.6953H110.57V83.6953ZM109.088 84.1803L92.6819 111.485L94.3962 112.515L110.802 85.2103L109.088 84.1803ZM93.5391 111H74.1641V113H93.5391V111ZM75.0117 112.531L100.051 72.5306L98.3555 71.4694L73.3164 111.469L75.0117 112.531ZM100.055 71.4766L75.4849 31.4766L73.7807 32.5234L98.351 72.5234L100.055 71.4766ZM74.6328 33H93.8125V31H74.6328V33Z" fill="white"/>
+                </g>
+                <g id="U" filter="url(#filter1_d_1_3)">
+                <path d="M53.3672 32H70.2813V83.9531C70.2813 89.7865 68.888 94.8906 66.1016 99.2656C63.3411 103.641 59.474 107.052 54.5 109.5C49.526 111.922 43.7318 113.133 37.1172 113.133C30.4766 113.133 24.6693 111.922 19.6953 109.5C14.7214 107.052 10.8542 103.641 8.09375 99.2656C5.33333 94.8906 3.95312 89.7865 3.95312 83.9531V32H20.8672V82.5078C20.8672 85.5547 21.5313 88.263 22.8594 90.6328C24.2135 93.0026 26.1146 94.8646 28.5625 96.2188C31.0104 97.5729 33.862 98.25 37.1172 98.25C40.3984 98.25 43.25 97.5729 45.6719 96.2188C48.1198 94.8646 50.0078 93.0026 51.3359 90.6328C52.6901 88.263 53.3672 85.5547 53.3672 82.5078V32Z" fill="white"/>
+                <path d="M53.3672 32V31H52.3672V32H53.3672ZM70.2813 32H71.2813V31H70.2813V32ZM66.1016 99.2656L65.2581 98.7284L65.2558 98.732L66.1016 99.2656ZM54.5 109.5L54.9378 110.399L54.9416 110.397L54.5 109.5ZM19.6953 109.5L19.2537 110.397L19.2575 110.399L19.6953 109.5ZM8.09375 99.2656L7.24802 99.7992L7.24802 99.7992L8.09375 99.2656ZM3.95312 32V31H2.95312V32H3.95312ZM20.8672 32H21.8672V31H20.8672V32ZM22.8594 90.6328L21.987 91.1217L21.9911 91.129L22.8594 90.6328ZM28.5625 96.2188L28.0784 97.0938L28.0784 97.0938L28.5625 96.2188ZM45.6719 96.2188L45.1878 95.3437L45.1838 95.3459L45.6719 96.2188ZM51.3359 90.6328L50.4677 90.1367L50.4636 90.1439L51.3359 90.6328ZM53.3672 33H70.2813V31H53.3672V33ZM69.2813 32V83.9531H71.2813V32H69.2813ZM69.2813 83.9531C69.2813 89.6206 67.93 94.5334 65.2581 98.7284L66.945 99.8028C69.8461 95.2479 71.2813 89.9523 71.2813 83.9531H69.2813ZM65.2558 98.732C62.6011 102.94 58.879 106.23 54.0584 108.603L54.9416 110.397C60.0689 107.874 64.0812 104.342 66.9473 99.7992L65.2558 98.732ZM54.0622 108.601C49.2488 110.945 43.6094 112.133 37.1172 112.133V114.133C43.8541 114.133 49.8033 112.899 54.9378 110.399L54.0622 108.601ZM37.1172 112.133C30.5982 112.133 24.946 110.944 20.1331 108.601L19.2575 110.399C24.3925 112.899 30.3549 114.133 37.1172 114.133V112.133ZM20.1369 108.603C15.3163 106.23 11.5942 102.94 8.93948 98.732L7.24802 99.7992C10.1141 104.342 14.1264 107.874 19.2537 110.397L20.1369 108.603ZM8.93948 98.732C6.2923 94.5365 4.95312 89.6224 4.95312 83.9531H2.95312C2.95312 89.9505 4.37436 95.2448 7.24802 99.7992L8.93948 98.732ZM4.95312 83.9531V32H2.95312V83.9531H4.95312ZM3.95312 33H20.8672V31H3.95312V33ZM19.8672 32V82.5078H21.8672V32H19.8672ZM19.8672 82.5078C19.8672 85.7047 20.5654 88.5851 21.987 91.1217L23.7317 90.1439C22.4971 87.9409 21.8672 85.4047 21.8672 82.5078H19.8672ZM21.9911 91.129C23.4386 93.662 25.4744 95.6532 28.0784 97.0938L29.0466 95.3437C26.7548 94.0759 24.9885 92.3432 23.7276 90.1367L21.9911 91.129ZM28.0784 97.0938C30.6972 98.5424 33.7205 99.25 37.1172 99.25V97.25C34.0034 97.25 31.3237 96.6034 29.0466 95.3437L28.0784 97.0938ZM37.1172 99.25C40.538 99.25 43.5638 98.5432 46.1599 97.0916L45.1838 95.3459C42.9362 96.6027 40.2588 97.25 37.1172 97.25V99.25ZM46.1559 97.0938C48.7616 95.6524 50.7864 93.6588 52.2083 91.1217L50.4636 90.1439C49.2293 92.3464 47.478 94.0768 45.1878 95.3437L46.1559 97.0938ZM52.2042 91.129C53.6544 88.5911 54.3672 85.708 54.3672 82.5078H52.3672C52.3672 85.4013 51.7258 87.935 50.4677 90.1367L52.2042 91.129ZM54.3672 82.5078V32H52.3672V82.5078H54.3672Z" fill="white"/>
+                </g>
+                </g>
+                <defs>
+                <filter id="filter0_d_1_3" x="70.1641" y="32" width="80.2656" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3" result="shape"/>
+                </filter>
+                <filter id="filter1_d_1_3" x="-0.046875" y="32" width="74.3281" height="89.1328" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3" result="shape"/>
+                </filter>
+                <linearGradient id="paint0_linear_1_3" x1="121" y1="64" x2="121" y2="90" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_1_3" x1="40" y1="33" x2="40" y2="59" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_1_3" x1="28" y1="63" x2="28" y2="89" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear_1_3" x1="107" y1="33" x2="107" y2="59" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear_1_3" x1="75" y1="17" x2="75" y2="43" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <clipPath id="clip0_1_3">
+                <rect width="150" height="150" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>   
             </div>
-            <div class="panel">
-                <div class="slideContent">Third Slide Content</div>
+            <div class="cardHeader">User Experience</div>
+            <div class="cardBody">
+                <ul>
+                    <li>Designing and implementing fluid User Interface</li>
+                    <li>Bringing website to life with animated content</li>
+                    <li>Ensuring fast load times through optimization</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardImage">                        
+                <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame 1" clip-path="url(#clip0_1_3)">
+                <g id="X" filter="url(#filter0_d_1_3)">
+                <path d="M93.8125 32L109.945 59.2656H110.57L126.781 32H145.883L121.469 72L146.43 112H126.977L110.57 84.6953H109.945L93.5391 112H74.1641L99.2031 72L74.6328 32H93.8125Z" fill="white"/>
+                <path d="M93.8125 32L94.6731 31.4908L94.3827 31H93.8125V32ZM109.945 59.2656L109.085 59.7748L109.375 60.2656H109.945V59.2656ZM110.57 59.2656V60.2656H111.139L111.43 59.7767L110.57 59.2656ZM126.781 32V31H126.212L125.922 31.4889L126.781 32ZM145.883 32L146.736 32.521L147.665 31H145.883V32ZM121.469 72L120.615 71.479L120.294 72.0058L120.62 72.5294L121.469 72ZM146.43 112V113H148.232L147.278 111.471L146.43 112ZM126.977 112L126.119 112.515L126.411 113H126.977V112ZM110.57 84.6953L111.427 84.1803L111.136 83.6953H110.57V84.6953ZM109.945 84.6953V83.6953H109.38L109.088 84.1803L109.945 84.6953ZM93.5391 112V113H94.1048L94.3962 112.515L93.5391 112ZM74.1641 112L73.3164 111.469L72.3583 113H74.1641V112ZM99.2031 72L100.051 72.5306L100.38 72.005L100.055 71.4766L99.2031 72ZM74.6328 32V31H72.845L73.7807 32.5234L74.6328 32ZM92.9519 32.5092L109.085 59.7748L110.806 58.7564L94.6731 31.4908L92.9519 32.5092ZM109.945 60.2656H110.57V58.2656H109.945V60.2656ZM111.43 59.7767L127.641 32.511L125.922 31.4889L109.711 58.7546L111.43 59.7767ZM126.781 33H145.883V31H126.781V33ZM145.029 31.479L120.615 71.479L122.322 72.521L146.736 32.521L145.029 31.479ZM120.62 72.5294L145.581 112.529L147.278 111.471L122.317 71.4706L120.62 72.5294ZM146.43 111H126.977V113H146.43V111ZM127.834 111.485L111.427 84.1803L109.713 85.2103L126.119 112.515L127.834 111.485ZM110.57 83.6953H109.945V85.6953H110.57V83.6953ZM109.088 84.1803L92.6819 111.485L94.3962 112.515L110.802 85.2103L109.088 84.1803ZM93.5391 111H74.1641V113H93.5391V111ZM75.0117 112.531L100.051 72.5306L98.3555 71.4694L73.3164 111.469L75.0117 112.531ZM100.055 71.4766L75.4849 31.4766L73.7807 32.5234L98.351 72.5234L100.055 71.4766ZM74.6328 33H93.8125V31H74.6328V33Z" fill="white"/>
+                </g>
+                <g id="U" filter="url(#filter1_d_1_3)">
+                <path d="M53.3672 32H70.2813V83.9531C70.2813 89.7865 68.888 94.8906 66.1016 99.2656C63.3411 103.641 59.474 107.052 54.5 109.5C49.526 111.922 43.7318 113.133 37.1172 113.133C30.4766 113.133 24.6693 111.922 19.6953 109.5C14.7214 107.052 10.8542 103.641 8.09375 99.2656C5.33333 94.8906 3.95312 89.7865 3.95312 83.9531V32H20.8672V82.5078C20.8672 85.5547 21.5313 88.263 22.8594 90.6328C24.2135 93.0026 26.1146 94.8646 28.5625 96.2188C31.0104 97.5729 33.862 98.25 37.1172 98.25C40.3984 98.25 43.25 97.5729 45.6719 96.2188C48.1198 94.8646 50.0078 93.0026 51.3359 90.6328C52.6901 88.263 53.3672 85.5547 53.3672 82.5078V32Z" fill="white"/>
+                <path d="M53.3672 32V31H52.3672V32H53.3672ZM70.2813 32H71.2813V31H70.2813V32ZM66.1016 99.2656L65.2581 98.7284L65.2558 98.732L66.1016 99.2656ZM54.5 109.5L54.9378 110.399L54.9416 110.397L54.5 109.5ZM19.6953 109.5L19.2537 110.397L19.2575 110.399L19.6953 109.5ZM8.09375 99.2656L7.24802 99.7992L7.24802 99.7992L8.09375 99.2656ZM3.95312 32V31H2.95312V32H3.95312ZM20.8672 32H21.8672V31H20.8672V32ZM22.8594 90.6328L21.987 91.1217L21.9911 91.129L22.8594 90.6328ZM28.5625 96.2188L28.0784 97.0938L28.0784 97.0938L28.5625 96.2188ZM45.6719 96.2188L45.1878 95.3437L45.1838 95.3459L45.6719 96.2188ZM51.3359 90.6328L50.4677 90.1367L50.4636 90.1439L51.3359 90.6328ZM53.3672 33H70.2813V31H53.3672V33ZM69.2813 32V83.9531H71.2813V32H69.2813ZM69.2813 83.9531C69.2813 89.6206 67.93 94.5334 65.2581 98.7284L66.945 99.8028C69.8461 95.2479 71.2813 89.9523 71.2813 83.9531H69.2813ZM65.2558 98.732C62.6011 102.94 58.879 106.23 54.0584 108.603L54.9416 110.397C60.0689 107.874 64.0812 104.342 66.9473 99.7992L65.2558 98.732ZM54.0622 108.601C49.2488 110.945 43.6094 112.133 37.1172 112.133V114.133C43.8541 114.133 49.8033 112.899 54.9378 110.399L54.0622 108.601ZM37.1172 112.133C30.5982 112.133 24.946 110.944 20.1331 108.601L19.2575 110.399C24.3925 112.899 30.3549 114.133 37.1172 114.133V112.133ZM20.1369 108.603C15.3163 106.23 11.5942 102.94 8.93948 98.732L7.24802 99.7992C10.1141 104.342 14.1264 107.874 19.2537 110.397L20.1369 108.603ZM8.93948 98.732C6.2923 94.5365 4.95312 89.6224 4.95312 83.9531H2.95312C2.95312 89.9505 4.37436 95.2448 7.24802 99.7992L8.93948 98.732ZM4.95312 83.9531V32H2.95312V83.9531H4.95312ZM3.95312 33H20.8672V31H3.95312V33ZM19.8672 32V82.5078H21.8672V32H19.8672ZM19.8672 82.5078C19.8672 85.7047 20.5654 88.5851 21.987 91.1217L23.7317 90.1439C22.4971 87.9409 21.8672 85.4047 21.8672 82.5078H19.8672ZM21.9911 91.129C23.4386 93.662 25.4744 95.6532 28.0784 97.0938L29.0466 95.3437C26.7548 94.0759 24.9885 92.3432 23.7276 90.1367L21.9911 91.129ZM28.0784 97.0938C30.6972 98.5424 33.7205 99.25 37.1172 99.25V97.25C34.0034 97.25 31.3237 96.6034 29.0466 95.3437L28.0784 97.0938ZM37.1172 99.25C40.538 99.25 43.5638 98.5432 46.1599 97.0916L45.1838 95.3459C42.9362 96.6027 40.2588 97.25 37.1172 97.25V99.25ZM46.1559 97.0938C48.7616 95.6524 50.7864 93.6588 52.2083 91.1217L50.4636 90.1439C49.2293 92.3464 47.478 94.0768 45.1878 95.3437L46.1559 97.0938ZM52.2042 91.129C53.6544 88.5911 54.3672 85.708 54.3672 82.5078H52.3672C52.3672 85.4013 51.7258 87.935 50.4677 90.1367L52.2042 91.129ZM54.3672 82.5078V32H52.3672V82.5078H54.3672Z" fill="white"/>
+                </g>
+                </g>
+                <defs>
+                <filter id="filter0_d_1_3" x="70.1641" y="32" width="80.2656" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3" result="shape"/>
+                </filter>
+                <filter id="filter1_d_1_3" x="-0.046875" y="32" width="74.3281" height="89.1328" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3" result="shape"/>
+                </filter>
+                <linearGradient id="paint0_linear_1_3" x1="121" y1="64" x2="121" y2="90" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_1_3" x1="40" y1="33" x2="40" y2="59" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_1_3" x1="28" y1="63" x2="28" y2="89" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear_1_3" x1="107" y1="33" x2="107" y2="59" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear_1_3" x1="75" y1="17" x2="75" y2="43" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <clipPath id="clip0_1_3">
+                <rect width="150" height="150" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>   
+            </div>
+            <div class="cardHeader">User Experience</div>
+            <div class="cardBody">
+                <ul>
+                    <li>Designing and implementing fluid User Interface</li>
+                    <li>Bringing website to life with animated content</li>
+                    <li>Ensuring fast load times through optimization</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardImage">                        
+                <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Frame 1" clip-path="url(#clip0_1_3)">
+                <g id="X" filter="url(#filter0_d_1_3)">
+                <path d="M93.8125 32L109.945 59.2656H110.57L126.781 32H145.883L121.469 72L146.43 112H126.977L110.57 84.6953H109.945L93.5391 112H74.1641L99.2031 72L74.6328 32H93.8125Z" fill="white"/>
+                <path d="M93.8125 32L94.6731 31.4908L94.3827 31H93.8125V32ZM109.945 59.2656L109.085 59.7748L109.375 60.2656H109.945V59.2656ZM110.57 59.2656V60.2656H111.139L111.43 59.7767L110.57 59.2656ZM126.781 32V31H126.212L125.922 31.4889L126.781 32ZM145.883 32L146.736 32.521L147.665 31H145.883V32ZM121.469 72L120.615 71.479L120.294 72.0058L120.62 72.5294L121.469 72ZM146.43 112V113H148.232L147.278 111.471L146.43 112ZM126.977 112L126.119 112.515L126.411 113H126.977V112ZM110.57 84.6953L111.427 84.1803L111.136 83.6953H110.57V84.6953ZM109.945 84.6953V83.6953H109.38L109.088 84.1803L109.945 84.6953ZM93.5391 112V113H94.1048L94.3962 112.515L93.5391 112ZM74.1641 112L73.3164 111.469L72.3583 113H74.1641V112ZM99.2031 72L100.051 72.5306L100.38 72.005L100.055 71.4766L99.2031 72ZM74.6328 32V31H72.845L73.7807 32.5234L74.6328 32ZM92.9519 32.5092L109.085 59.7748L110.806 58.7564L94.6731 31.4908L92.9519 32.5092ZM109.945 60.2656H110.57V58.2656H109.945V60.2656ZM111.43 59.7767L127.641 32.511L125.922 31.4889L109.711 58.7546L111.43 59.7767ZM126.781 33H145.883V31H126.781V33ZM145.029 31.479L120.615 71.479L122.322 72.521L146.736 32.521L145.029 31.479ZM120.62 72.5294L145.581 112.529L147.278 111.471L122.317 71.4706L120.62 72.5294ZM146.43 111H126.977V113H146.43V111ZM127.834 111.485L111.427 84.1803L109.713 85.2103L126.119 112.515L127.834 111.485ZM110.57 83.6953H109.945V85.6953H110.57V83.6953ZM109.088 84.1803L92.6819 111.485L94.3962 112.515L110.802 85.2103L109.088 84.1803ZM93.5391 111H74.1641V113H93.5391V111ZM75.0117 112.531L100.051 72.5306L98.3555 71.4694L73.3164 111.469L75.0117 112.531ZM100.055 71.4766L75.4849 31.4766L73.7807 32.5234L98.351 72.5234L100.055 71.4766ZM74.6328 33H93.8125V31H74.6328V33Z" fill="white"/>
+                </g>
+                <g id="U" filter="url(#filter1_d_1_3)">
+                <path d="M53.3672 32H70.2813V83.9531C70.2813 89.7865 68.888 94.8906 66.1016 99.2656C63.3411 103.641 59.474 107.052 54.5 109.5C49.526 111.922 43.7318 113.133 37.1172 113.133C30.4766 113.133 24.6693 111.922 19.6953 109.5C14.7214 107.052 10.8542 103.641 8.09375 99.2656C5.33333 94.8906 3.95312 89.7865 3.95312 83.9531V32H20.8672V82.5078C20.8672 85.5547 21.5313 88.263 22.8594 90.6328C24.2135 93.0026 26.1146 94.8646 28.5625 96.2188C31.0104 97.5729 33.862 98.25 37.1172 98.25C40.3984 98.25 43.25 97.5729 45.6719 96.2188C48.1198 94.8646 50.0078 93.0026 51.3359 90.6328C52.6901 88.263 53.3672 85.5547 53.3672 82.5078V32Z" fill="white"/>
+                <path d="M53.3672 32V31H52.3672V32H53.3672ZM70.2813 32H71.2813V31H70.2813V32ZM66.1016 99.2656L65.2581 98.7284L65.2558 98.732L66.1016 99.2656ZM54.5 109.5L54.9378 110.399L54.9416 110.397L54.5 109.5ZM19.6953 109.5L19.2537 110.397L19.2575 110.399L19.6953 109.5ZM8.09375 99.2656L7.24802 99.7992L7.24802 99.7992L8.09375 99.2656ZM3.95312 32V31H2.95312V32H3.95312ZM20.8672 32H21.8672V31H20.8672V32ZM22.8594 90.6328L21.987 91.1217L21.9911 91.129L22.8594 90.6328ZM28.5625 96.2188L28.0784 97.0938L28.0784 97.0938L28.5625 96.2188ZM45.6719 96.2188L45.1878 95.3437L45.1838 95.3459L45.6719 96.2188ZM51.3359 90.6328L50.4677 90.1367L50.4636 90.1439L51.3359 90.6328ZM53.3672 33H70.2813V31H53.3672V33ZM69.2813 32V83.9531H71.2813V32H69.2813ZM69.2813 83.9531C69.2813 89.6206 67.93 94.5334 65.2581 98.7284L66.945 99.8028C69.8461 95.2479 71.2813 89.9523 71.2813 83.9531H69.2813ZM65.2558 98.732C62.6011 102.94 58.879 106.23 54.0584 108.603L54.9416 110.397C60.0689 107.874 64.0812 104.342 66.9473 99.7992L65.2558 98.732ZM54.0622 108.601C49.2488 110.945 43.6094 112.133 37.1172 112.133V114.133C43.8541 114.133 49.8033 112.899 54.9378 110.399L54.0622 108.601ZM37.1172 112.133C30.5982 112.133 24.946 110.944 20.1331 108.601L19.2575 110.399C24.3925 112.899 30.3549 114.133 37.1172 114.133V112.133ZM20.1369 108.603C15.3163 106.23 11.5942 102.94 8.93948 98.732L7.24802 99.7992C10.1141 104.342 14.1264 107.874 19.2537 110.397L20.1369 108.603ZM8.93948 98.732C6.2923 94.5365 4.95312 89.6224 4.95312 83.9531H2.95312C2.95312 89.9505 4.37436 95.2448 7.24802 99.7992L8.93948 98.732ZM4.95312 83.9531V32H2.95312V83.9531H4.95312ZM3.95312 33H20.8672V31H3.95312V33ZM19.8672 32V82.5078H21.8672V32H19.8672ZM19.8672 82.5078C19.8672 85.7047 20.5654 88.5851 21.987 91.1217L23.7317 90.1439C22.4971 87.9409 21.8672 85.4047 21.8672 82.5078H19.8672ZM21.9911 91.129C23.4386 93.662 25.4744 95.6532 28.0784 97.0938L29.0466 95.3437C26.7548 94.0759 24.9885 92.3432 23.7276 90.1367L21.9911 91.129ZM28.0784 97.0938C30.6972 98.5424 33.7205 99.25 37.1172 99.25V97.25C34.0034 97.25 31.3237 96.6034 29.0466 95.3437L28.0784 97.0938ZM37.1172 99.25C40.538 99.25 43.5638 98.5432 46.1599 97.0916L45.1838 95.3459C42.9362 96.6027 40.2588 97.25 37.1172 97.25V99.25ZM46.1559 97.0938C48.7616 95.6524 50.7864 93.6588 52.2083 91.1217L50.4636 90.1439C49.2293 92.3464 47.478 94.0768 45.1878 95.3437L46.1559 97.0938ZM52.2042 91.129C53.6544 88.5911 54.3672 85.708 54.3672 82.5078H52.3672C52.3672 85.4013 51.7258 87.935 50.4677 90.1367L52.2042 91.129ZM54.3672 82.5078V32H52.3672V82.5078H54.3672Z" fill="white"/>
+                </g>
+                </g>
+                <defs>
+                <filter id="filter0_d_1_3" x="70.1641" y="32" width="80.2656" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3" result="shape"/>
+                </filter>
+                <filter id="filter1_d_1_3" x="-0.046875" y="32" width="74.3281" height="89.1328" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_3"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_3" result="shape"/>
+                </filter>
+                <linearGradient id="paint0_linear_1_3" x1="121" y1="64" x2="121" y2="90" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_1_3" x1="40" y1="33" x2="40" y2="59" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear_1_3" x1="28" y1="63" x2="28" y2="89" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear_1_3" x1="107" y1="33" x2="107" y2="59" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear_1_3" x1="75" y1="17" x2="75" y2="43" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#231C50"/>
+                <stop offset="0.0001" stop-color="#231C50"/>
+                <stop offset="0.171875" stop-color="#351867" stop-opacity="0.954427"/>
+                <stop offset="0.984375" stop-color="#AD00FF" stop-opacity="0.65"/>
+                <stop offset="0.984475" stop-color="#AD00FF" stop-opacity="0.65"/>
+                </linearGradient>
+                <clipPath id="clip0_1_3">
+                <rect width="150" height="150" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>   
+            </div>
+            <div class="cardHeader">User Experience</div>
+            <div class="cardBody">
+                <ul>
+                    <li>Designing and implementing fluid User Interface</li>
+                    <li>Bringing website to life with animated content</li>
+                    <li>Ensuring fast load times through optimization</li>
+                </ul>
             </div>
         </div>
     </div>
-    </div>  
 
     <div class="conceptsSection">
         <h3>Important concepts:</h3>
-        <section>z-index: CSS property that defines the order of overlapping content. Components with a higher z-index will
-        be displayed over components with lower z index.</section>
-
-        <section>position relative: By default components have position static, meaning they follow the normal flow of an HTML document. 
-        However, by changing an element's position to relative you are able to move the element from the position it would normally have
-        relative to it's parent container. This is done using the properties top, bottom, right, and left. </section>
-
-        <section>position sticky: Components with position:sticky behave as though they have position:relative until they pass a specified
-            threshold in the document. Once they pass the threshold they behave as if they have the position:fixed property; meaning that
-            they are no longer in the flow of the document and will stay where they are positioned unless the threshold is passed again.
-        </section>
+        <section>display flex: Essential for making the cards responsive for mobile screen sizes, and for all developers in general. You can learn or brush upon flex basics <a href="" style="text-decoration:underline">here.</a></section>
+        <section>gap: Adds uniform margin between all children inside of given element.</section>
     </div>
 
     <div class="tutorialSection">
-        <h3>Step 1: Create panel class</h3>
-        <section>Create a panel class which will be given to every "panel" on your webpage. The height of .panel needs to be
-            at least 100vh so that each panel covers the entire screen when they "stick" to the top. Height is set to 105vh in this example
-            to create a smoother scrolling effect. 
+        <h3>Step 1: Create cardHolder element</h3>
+        <section><p>We will start by creating a cardHolder with a width of 80vw and margin-left of 10vw to center itself.
+            cardHolder will need display:flex and flex-direction:row so elements flow vertically.</p><p>We will then completely center 
+            elements in cardHolder by using align-items:center and justify-content:center. Next, we set flex-wrap:wrap so cards 
+            which would overflow past the width of cardHolder instead move down and form another row of cards.</p><p>Finally, we set 
+            gap:5vw so cards are equally spaced.</p> 
         </section>
         <div class="codeHolder">
-            <p><script src="https://gist.github.com/Chrisarev/5d468d2c2b7a3c5a3ba77e0747f020ea.js"></script></p>
-            <p><script src="https://gist.github.com/Chrisarev/e9018433c75ab2f8bf79508dcbe1f35c.js"></script></p>
+            <p><script src="https://gist.github.com/Chrisarev/0b276140dac67e0e58c99516660b0b7c.js"></script></p>
         </div>
-        <section>In order for the panels to stick to
-            the top they need position:sticky and top:0. The property top:0 specifies that when the top of our panel reaches 
-            the viewport's 0th pixel it will "stick" and become fixed.
+        <h3>Step 2: Create the card class</h3>
+        <section><p>Start by giving the card class width:18rem and min-height:24rem so that height can increase depending
+            on content inside of the card.</p>
+        <p>Then add border-radius:10px to give it rounded corners and margin:0 to make sure there is no unnecessary spacing. Set background color to whatever you'd like.</p>
         </section>
-
-    <h3>Step 2: Create panel content holder</h3>
-    <section>Create a panelContent class inside of the panel class which will hold all content for each slide. This component should
-        have position:relative so that z-index can be set for content inside of it. Margin-top and text-align are only added so each 
-        panel has text which will be covered by the next panel to ensure everything is working properly. 
-    </section>
-    <div class="codeHolder">
-    <script src="https://gist.github.com/Chrisarev/7b8fffa08ef28eb10c95d9b6fce3c25a.js"></script>
-    </div>
-
-    <h3>And thats it ! Now you can add your own content inside of the slides and customize everything as you like ! Just make sure to
-        keep track of your z-index's and everything else is just like building a regular website layout. Enjoy :) 
-    </h3>
-
+        <div class="codeHolder">
+            <p><script src="https://gist.github.com/Chrisarev/86b6a4cee6f583a57c889356366df40e.js"></script></p>
+        </div>
+        <h3>Step 3: Create classes for the card sections.</h3>
+        <section>
+            <p>The first class we will be making is cardImage. Set width:100% and display:flex. Then add
+                justify-content:center. This will center media that doesn't take up 100% of the cardImage class such as SVGs. 
+            </p>
+            <p>Next we will make a cardHeader class which will have height:10% and width:100%. Additionally, we will use text-align:center
+                and set font-size:calc(1.2em + 1vmin). This allows for scalable text without media queries. 
+            </p>
+            <p>Finally, we need a cardBody class which will have font-size:calc(0.7em + 1vmin)
+                for scalable text. Next add padding-left:10px and padding-right:10px so text is centered.
+            </p>
+            <p>Your html and css should be structured as so:</p>
+        </section>
+        <div class="codeHolder">
+            <p><script src="https://gist.github.com/Chrisarev/7ce327fed300cba446eb125e85c42ef0.js"></script></p>
+            <p><script src="https://gist.github.com/Chrisarev/7dc2b4bf784fb7a5788953a12d4f6cf6.js"></script></p>
+        </div>
+        <h3>Step 4: Styling list elements in cardBody</h3>
+        <section>
+            <p>You can format the text inside of the cardBody however you like, I chose to go with an unordered list.
+                Set the ul display:inline so list items flow vertically and list-style-type:none so there are no bullet points.
+            </p>
+            <p>Next, set li margin-bottom:8px to space out sentences in cardBody.</p>
+            <p>This will be the final result and you can add as many cards as you like inside of cardHolder.</p>
+        </section>
+        <div class="codeHolder">
+            <p><script src="https://gist.github.com/Chrisarev/6fcf47564fe8ec2c84d1a50e4323a383.js"></script></p>
+        </div>
     </div>
     <div class="footer">
 
