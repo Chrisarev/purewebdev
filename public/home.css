@@ -246,20 +246,47 @@ p{
 
 .featuredHolder{
     width:100%; 
-    height:100vh; 
+    min-height:100vh; 
     background-color: #2a2a2a;
     border-radius:7px;
     box-shadow: 0 0 4px #9ecaed;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:0.5rem;
+}
+
+.featuredPost{
+    width:80%;
+    height:7rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    color:white; 
+}
+
+.featuredPostTitle{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color:white;
+    font-size:calc(0.6em + 2vmin);
+    font-weight: 700;
+}
+
+.featuredPostAuthor{
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    font-size:calc(0.6em + 1vmin); 
 }
 
 .footer{
     margin-top:5vh;
     width:100%;
-    height:40vh;
-    background-color: lightskyblue;
+    /*height:40vh;
+    background-color: lightskyblue;*/
 }
 
-@media (max-width: 840px) {
+@media (max-width: 935px) {
 h2{
     margin-left:10%;
     width:80%; 

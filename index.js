@@ -5,11 +5,11 @@ const ejsMate = require('ejs-mate'); ///allows basic boilerplate
 const methodOverride = require('method-override') ///allows http verbs other than POST/GET in forms 
 const Post = require('./models/post') //require mongoose model campground.js
 
-
+///creates db yelp-camp(or connects to it if already made)
 mongoose.connect('mongodb://localhost:27017/pureWebDev', {
     useNewUrlParser:true,
     useUnifiedTopology:true
-});///creates db yelp-camp(or connects to it if already made)
+});
 
 const db = mongoose.connection; 
 db.on("error", console.error.bind(console, "connection error:")); 
@@ -19,21 +19,17 @@ db.once("open", () => {
 
 const app = express(); ///starts express app 
 
-//app.engine('ejs', ejsMate); ///allows basic boilerplate
-app.set('view engine', 'ejs');  ///sets view engine to ejs 
-app.set('views', path.join(__dirname, 'views')) ///so we can run app.js from outside of yelpcamp folder 
+///sets view engine to ejs 
+app.set('view engine', 'ejs');  
+///so we can run app.js from outside of yelpcamp folder 
+app.set('views', path.join(__dirname, 'views')) 
 app.use(express.static(path.join(__dirname, 'public'))); 
 
-app.use(express.urlencoded({extended:true})) ///allows us to get req.params 
-app.use(methodOverride('_method')) ///allows requests other than get/post thru forms 
+///allows us to get req.params
+app.use(express.urlencoded({extended:true}))
+///allows requests other than get/post thru forms  
+app.use(methodOverride('_method')) 
 
-
-app.get('/post', (req,res) =>{
-    res.render('1')
-})
-app.get('/2', (req,res) =>{
-    res.render('2')
-})
 app.get('/post/:id',(req,res) =>{
     const id = req.params.id; 
     res.render(`${id}`)
