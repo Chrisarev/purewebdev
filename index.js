@@ -4,9 +4,12 @@ const mongoose = require('mongoose'); ///connection between JS and mongodb
 const ejsMate = require('ejs-mate'); ///allows basic boilerplate
 const methodOverride = require('method-override') ///allows http verbs other than POST/GET in forms 
 const Post = require('./models/post') //require mongoose model campground.js
+const ExpressError = require('./utils/ExpressError')
+const catchAsync = require('./utils/catchAsync')
 
 ///creates db yelp-camp(or connects to it if already made)
-mongoose.connect('mongodb://localhost:27017/pureWebDev', {
+const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/pureWebDev';
+mongoose.connect(dbUrl, {
     useNewUrlParser:true,
     useUnifiedTopology:true
 });
@@ -59,6 +62,21 @@ app.get('/', async (req,res) =>{
     res.render('home', {posts})
 })
 
-app.listen(3000, () =>{
+app.all('*', (req,res,next) => { ///runs for all unrecognized urls 
+    next(new ExpressError('Page Not Found', 404))
+    ///passes ExpressError into err param for app.use
+})
+
+///this runs if catchAsync catches error and calls next() OR if next(new ExpressError) gets called OR if validation error 
+app.use((err,req,res,next) => { 
+    const {status = 500} = err; ///gets status and message from ExpressError passed as err, else set defaults
+    if(!err.message) err.message = 'Something went wrong!' ///if no error message, set default 
+    res.status(status).render('error',{err})
+    ///sets response status property to status passed in and renders error template 
+})
+
+///listen on heroku specified port or 3000 in dev environment 
+const PORT = process.env.PORT || 3000; 
+app.listen(PORT, () =>{
     console.log('Serving on Port 3000')
 })
