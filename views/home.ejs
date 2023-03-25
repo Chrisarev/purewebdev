@@ -35,19 +35,13 @@
                     <div class="postDate">Posted on <%= post.date.toString().slice(4,15)%></div>
                     <div class="postTags">
                         <% if (post.tags.includes('HTML')) {%>
-                        <form action="post">
                             <button class="htmlTag">HTML</button>
-                        </form>
                         <% } %>
                         <% if (post.tags.includes('CSS')) {%>
-                        <form action="post">
                             <button class="cssTag">CSS</button>
-                        </form>
                         <% } %>
                         <% if (post.tags.includes('JS')) {%>
-                        <form action="post">
                             <button class="jsTag">JS</button>
-                        </form>
                         <% } %>
                     </div>
                 </div>

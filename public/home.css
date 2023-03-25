@@ -74,7 +74,7 @@ a{
 @media (max-width:970px) {
     nav{
         font-size: calc(0.5em + 1.5vmin); 
-        gap:14%;
+        gap:10%;
     }
     .icon{
         margin-left:14%; 
@@ -219,7 +219,7 @@ p{
     height:calc(1em + 2vmin); 
     border-radius:10px; 
     color:white; 
-    text-align: center;
+    text-align:center;
     font-size:calc(0.8em + 2vmin);
     border-style:none;
     cursor:pointer;
@@ -246,7 +246,6 @@ p{
 
 .featuredHolder{
     width:100%; 
-    min-height:100vh; 
     background-color: #2a2a2a;
     border-radius:7px;
     box-shadow: 0 0 4px #9ecaed;
@@ -254,6 +253,7 @@ p{
     flex-direction: column;
     align-items: center;
     padding-top:0.5rem;
+    padding-bottom:0.5rem;
 }
 
 .featuredPost{
