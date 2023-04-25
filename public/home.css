@@ -9,7 +9,7 @@ nav{
     width:100%;    
     height:8vh;
     display:flex;
-    gap:19%;
+    justify-content: space-around;
     position:sticky;
     align-items:center;
     top:0;
@@ -34,6 +34,7 @@ nav{
     position: relative;
     display: none;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -52,51 +53,28 @@ nav{
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: rgb(89, 89, 89);}
 
-.icon{
-    margin-left:6%;
-    
-}
-nav ul{
-    padding-right:5%;
-}
-
 ul{
     display:flex;
     flex-direction: row;
     gap:15%;
     list-style: none;
+    padding-right:3rem;
 }
+
 a{
     text-decoration:none;
     color:white;
 }
 
 @media (max-width:970px) {
-    nav{
-        font-size: calc(0.5em + 1.5vmin); 
-        gap:12%;
-    }
-    .icon{
-        margin-left:14%; 
-    }
+
     nav #sectionsUL{
         display:none; 
     }
-
     .dropdown{
         display:inline-block; 
     }
-    .dropbtn{
-        font-size: calc(0.5em + 1.5vmin); 
 
-    }
-
-}
-
-@media (max-width:500px) {
-    .icon{
-        margin-left:6%; 
-    }
 
 }
 

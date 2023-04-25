@@ -9,17 +9,18 @@ nav{
     width:100%;    
     height:8vh;
     display:flex;
-    gap:19%;
+    justify-content: space-around;
     position:sticky;
     align-items:center;
     top:0;
-    background-color: #2a2a2a;
+    background-color:#2a2a2a;
     font-size: calc(0.5em + 2vmin); 
     z-index:10;
     font-family: 'Raleway', sans-serif;
     white-space:nowrap;
+    color:#FFF5E4;
+    box-shadow: 0 0 10px #9ecaed;
 }
-
 .dropbtn{
     border-style:none; 
     font-family: 'Raleway', sans-serif;
@@ -28,14 +29,16 @@ nav{
     color:white; 
     height:8vh; 
 }
+
 .dropdown {
     position: relative;
     display: none;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #FFC4C4;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -50,38 +53,12 @@ nav{
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: rgb(89, 89, 89);}
 
-@media (max-width:970px) {
-    nav{
-        font-size: calc(0.5em + 1.5vmin); 
-        gap:12%;
-    }
-    nav #sectionsUL{
-        display:none; 
-    }
-
-    .dropdown{
-        display:inline-block; 
-    }
-    .dropbtn{
-        font-size: calc(0.5em + 1.5vmin); 
-
-    }
-
-}
-
-.icon{
-    margin-left:6%;
-}
-
-nav ul{
-    padding-right:5%;
-}
-
 ul{
     display:flex;
     flex-direction: row;
     gap:15%;
     list-style: none;
+    padding-right:3rem;
 }
 
 a{
@@ -89,8 +66,16 @@ a{
     color:white;
 }
 
-nav{
-    font-family: 'Raleway', sans-serif;
+@media (max-width:970px) {
+
+    nav #sectionsUL{
+        display:none; 
+    }
+    .dropdown{
+        display:inline-block; 
+    }
+
+
 }
 
 /*---------------------------------------POST CSS TEMPLATE ---------------------------------------- */
