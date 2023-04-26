@@ -5,9 +5,12 @@ Description
 ------------------------
 PureWebDev is a personal blogging website for myself that is focused on vanilla HTML/CSS/JS web dev. It is also a place where I share useful resources and material for people who are new to web dev.
 
+PureWebDev is a web development blogging website focused on vanilla HTML/CSS/JS. There are posts made by myself as well as featured articles from other websites. 
+
 Technology
 ------------------------
-*Front-end made with EJS templating engine. *Back-end made with Express.js. *Database used is MongoDB.
+*ront-end made with EJS templating engine. Back-end made with Express.js. 
+Database used is MongoDB.
 
 License
 ------------------------
